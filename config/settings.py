@@ -196,3 +196,8 @@ EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS', default=False) == "True"
 EMAIL_USE_SSL = os.getenv('EMAIL_USE_SSL', default=False) == "True"
+
+
+# Pagination, path - habits/paginations.py
+PAGE_SIZE = 7
+MAX_PAGE_SIZE = 14

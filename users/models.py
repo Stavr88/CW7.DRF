@@ -9,7 +9,7 @@ class User(AbstractUser):
     username = None
     email = models.EmailField(unique=True, verbose_name="E-mail")
     tg_chat_id = models.CharField(
-        max_length=50, verbose_name="Telergram chat_id", **NULLABLE
+        max_length=50, verbose_name="Telegram chat_id", **NULLABLE
     )
 
     USERNAME_FIELD = "email"
@@ -21,3 +21,6 @@ class User(AbstractUser):
 
     def __str__(self):
         return f"{self.email}"
+
+
+
