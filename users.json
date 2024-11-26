@@ -1,0 +1,38 @@
+[
+{
+  "model": "users.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$WduibJXbwIkopF0Rh43c9a$HqFguzCUeOgPz3Le6wvxKQ0jLSp0RAtWfTxNpHxq89w=",
+    "last_login": "2024-11-20T19:00:30.602Z",
+    "is_superuser": true,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-11-20T18:59:59.667Z",
+    "email": "globallife@mail.ru",
+    "tg_chat_id": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$lIcJzhLeDOPnwZavVjvi1n$X/gZOi1tEMJphHv7Z9QkHPg/EwqMYxETjE6s3H7LKKA=",
+    "last_login": "2024-11-25T15:26:05.076Z",
+    "is_superuser": true,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-11-20T19:08:20.677Z",
+    "email": "globallife88@mail.ru",
+    "tg_chat_id": null,
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]

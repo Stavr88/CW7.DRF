@@ -1,0 +1,108 @@
+[
+{
+  "model": "habits.habit",
+  "pk": 1,
+  "fields": {
+    "user": 3,
+    "location": "Moscow",
+    "time_habit": "2024-11-23T11:00:57Z",
+    "periodicity": 1,
+    "time_execution_habit": 120,
+    "action": "Дойти до красной площади",
+    "is_public": true,
+    "award": null,
+    "associated_habit": null
+  }
+},
+{
+  "model": "habits.habit",
+  "pk": 2,
+  "fields": {
+    "user": 3,
+    "location": "Moscow",
+    "time_habit": "2024-11-24T07:45:10Z",
+    "periodicity": 6,
+    "time_execution_habit": 0,
+    "action": "",
+    "is_public": true,
+    "award": null,
+    "associated_habit": null
+  }
+},
+{
+  "model": "habits.habit",
+  "pk": 3,
+  "fields": {
+    "user": 3,
+    "location": "Moscow",
+    "time_habit": "2024-11-24T13:10:21Z",
+    "periodicity": 1,
+    "time_execution_habit": 120,
+    "action": "777",
+    "is_public": true,
+    "award": null,
+    "associated_habit": 1
+  }
+},
+{
+  "model": "habits.habit",
+  "pk": 4,
+  "fields": {
+    "user": 3,
+    "location": "Санкт-Петербург",
+    "time_habit": "2024-11-24T13:15:21Z",
+    "periodicity": 3,
+    "time_execution_habit": 60,
+    "action": "Кинуть монету в р. Нева",
+    "is_public": true,
+    "award": "Билет в кино",
+    "associated_habit": null
+  }
+},
+{
+  "model": "habits.habit",
+  "pk": 5,
+  "fields": {
+    "user": 1,
+    "location": "Санкт-Петербург",
+    "time_habit": "2024-11-24T13:15:21Z",
+    "periodicity": 8,
+    "time_execution_habit": 100,
+    "action": "",
+    "is_public": true,
+    "award": "Билет в кино",
+    "associated_habit": null
+  }
+},
+{
+  "model": "habits.habit",
+  "pk": 6,
+  "fields": {
+    "user": 3,
+    "location": "Moscow",
+    "time_habit": "2024-11-25T17:08:38Z",
+    "periodicity": 1,
+    "time_execution_habit": 120,
+    "action": "",
+    "is_public": true,
+    "award": null,
+    "associated_habit": 2
+  }
+},
+{
+  "model": "habits.habit_pleasant",
+  "pk": 1,
+  "fields": {
+    "name": null,
+    "action": "Скушать яблоко"
+  }
+},
+{
+  "model": "habits.habit_pleasant",
+  "pk": 2,
+  "fields": {
+    "name": "Посмотреть фильм",
+    "action": "Любимый фильм"
+  }
+}
+]
