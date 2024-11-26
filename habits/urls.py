@@ -8,10 +8,16 @@ from habits.views import (
     HabitListApiView,
     HabitRetrieveApiView,
     HabitUpdateApiView,
-    PublicHabitListApiView
+    PublicHabitListApiView,
+    Habit_pleasantViewSet,
 )
 
 app_name = HabitsConfig.name
+
+router = SimpleRouter()
+
+router.register("", Habit_pleasantViewSet)
+
 
 urlpatterns = [
     path("", HabitListApiView.as_view(), name="habits"),
@@ -21,3 +27,5 @@ urlpatterns = [
     path("update/<int:pk>/", HabitUpdateApiView.as_view(), name="update"),
     path("delete/<int:pk>/", HabitDestroyApiView.as_view(), name="delete"),
 ]
+
+urlpatterns += router.urls

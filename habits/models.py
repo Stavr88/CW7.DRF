@@ -61,7 +61,6 @@ class Habit(models.Model):
         blank=True,
     )
 
-    # def clean(self):
     def validate_unique(self, exclude=None):
         """
         Функция для:
@@ -99,6 +98,7 @@ class Habit(models.Model):
         :return:
         """
         return reverse('post', kwargs={'post_slug': self.slug})
+
 
 class Habit_pleasant(models.Model):
     """

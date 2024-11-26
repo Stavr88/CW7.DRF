@@ -2,20 +2,21 @@ from rest_framework.generics import CreateAPIView, ListAPIView, RetrieveAPIView,
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.viewsets import ModelViewSet
 
-from habits.models import Habit
+from habits.models import Habit, Habit_pleasant
 from habits.paginations import HabitPaginator
-from habits.serializers import HabitSerializer
+from habits.serializers import HabitSerializer, Habit_pleasantSerializer
+from habits.services import send_information_about_new_habit_tg
 from users.permission import IsOwner
 
 
-# class HabitViewSet(ModelViewSet):
-#     queryset = Habit.objects.all()
-#     serializer_class = HabitSerializer
-#
-#     def perform_create(self, serializer):
-#         habit = serializer.save()
-#         habit.owner = self.request.user
-#         habit.save()
+class Habit_pleasantViewSet(ModelViewSet):
+    queryset = Habit_pleasant.objects.all()
+    serializer_class = Habit_pleasantSerializer
+
+    def perform_create(self, serializer):
+        habit = serializer.save()
+        habit.owner = self.request.user
+        habit.save()
 
 
 class HabitCreateApiView(CreateAPIView):
@@ -29,6 +30,8 @@ class HabitCreateApiView(CreateAPIView):
         habit = serializer.save()
         habit.owner = self.request.user
         habit.save()
+        if habit.user.tg_chat_id:
+            send_information_about_new_habit_tg(habit.user.tg_chat_id, "Создана новая привычка!")
 
 
 class HabitListApiView(ListAPIView):
