@@ -21,7 +21,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # повышения производительности
 DEBUG = os.getenv("DEBUG")
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     "django_celery_beat",
 
     "corsheaders",
+
+    "django_extensions",
 
 ]
 
