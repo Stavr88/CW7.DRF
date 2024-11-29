@@ -70,28 +70,30 @@ coverage run --source='.' manage.py test
 
 ### Для статистики покрытия тестами проекта используем команду:
 ```
-**coverage report**
+coverage report
 ```
 
 # Работа с Docker
 ### В командной строке проверяем версию командой:  
 ```
-**docker version**
+docker version
 ```
-### Тестируем докер командой :  
+### Тестируем докер командой:  
 ```
-**docker run hello-world**
+docker run hello-world
 ```
 ### Для взаимодействия сервиса postgresql и приложения создаем единую сеть командой:  
-- ```**docker network create HW27.2**```(имя сети , любое имя)
+```
+docker network create HW27.2
+```
 ### Создаем контейнер postgres командой: 
 ```
-**docker run -d --network=HW27.2 --name=postgres_container -p 5432:5432 -e POSTGRES_DB=hw27.2 -e POSTGRES_USER=user -e POSTGRES_PASSWORD=201023 postgres:latest**
+docker run -d --network=HW27.2 --name=postgres_container -p 5432:5432 -e POSTGRES_DB=hw27.2 -e POSTGRES_USER=user -e POSTGRES_PASSWORD=201023 postgres:latest
 ```
 ### Операции с контейнером см. раздел “Команды в Docker”, вот некоторые из них:
-- ```**docker stop postgres_container**``` - останавливает запущенный контейнер
-- ```**docker rm postgres_container**``` - удаляет контейнер
-- ```**docker ps -a**``` - показывает и запущенные и остановленные контейнеры (флаг "-а")
+- ```docker stop postgres_container``` - останавливает запущенный контейнер
+- ```docker rm postgres_container``` - удаляет контейнер
+- ```docker ps -a``` - показывает и запущенные и остановленные контейнеры (флаг "-а")
 ### Загрузка официального образа Python командой: 
 ```
 docker pull python
